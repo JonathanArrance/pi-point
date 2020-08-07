@@ -32,6 +32,12 @@ For a portable solution that you can take anywhere, you will need to get a batte
 
 URL - https://www.adafruit.com/product/1565
 
+5. **Pi Zero Case**
+
+The Pi Zero is a small board, and can fit in the palm of your hand. Its size makes it ideal for small IoT projects and hobbies, but the flip side of the coin is its durability. The Pi Zero is delicate and can be easily damaged. The case style is not important. Just get one that works well for you.
+
+URL - https://www.adafruit.com/product/3446?gclid=CjwKCAjw97P5BRBQEiwAGflV6Y0jhUfiw3n1Z3D8wG5ladnEnmvibWrs9EjfhXbkEjziPVyuBL4FIhoCrc4QAvD_BwE
+
 ## Setup
 
 # Configuration
