@@ -16,11 +16,21 @@ URL - https://www.raspberrypi.org/products/raspberry-pi-zero-w/
 
 2. **Micro SD Card**
 
+The Pi Zero W uses a micro SD card to boot from. This is not going to be a high performance application, so any MicroSD card can be used. I would recommend an 8GB card at minimum. If you want to future proof for any other Pi Zero projects you may as well pick up a 16GB card. It is about the same price and you get the 2x the storage. To keep costs low get the most cost effective card you can find.
+
+URL - https://www.makeuseof.com/tag/5-mistakes-avoid-buying-next-microsd-card/
 
 3. **Power Supply**
 
+The Pi Zero W uses a mini usb power connector so any power 5 volt supply with a min USB style connector can be used. I would recommend getting one that is in your budget, you do not need to go overboard and get anything to expensive. If you have an available USB port, you can use a mini usb cable and power the the Pi Zero W up with a standard USB port. 
+
+URL - https://www.canakit.com/raspberry-pi-adapter-power-supply.html
 
 4. **Battery Pack**
+
+For a portable solution that you can take anywhere, you will need to get a battery pack of some sort that can output 5v DC. You can make one yourself or buy one. They are readily available, and if you have one for chargeing your phone on the go, you can most likely use that. See the link below for an example.
+
+URL - https://www.adafruit.com/product/1565
 
 ## Setup
 
