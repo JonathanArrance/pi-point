@@ -18,8 +18,8 @@ sudo rm /usr/bin/python
 sudo ln -s /usr/bin/python3.7 /usr/bin/python
 
 #set up the private ip addr
-sudo ip addr add $PRIVATEIP/24 dev $INTERFACE
-sudo echo 'ip addr add $PRIVATEIP/24 dev $INTERFACE' 
+#sudo ip addr add $PRIVATEIP/24 dev $INTERFACE
+#sudo echo 'ip addr add $PRIVATEIP/24 dev $INTERFACE' 
 
 #install the packages
 #Install hostapd and enable at startup
@@ -43,10 +43,10 @@ EOF
 ) >> /etc/dhcpd.conf
 
 #set up ip forwarding
-(
-cat << 'EOF'
-net.ipv4.ip_forward=1
-) >> /etc/sysctl.d/routed-ap.conf
+#(
+#cat << 'EOF'
+#net.ipv4.ip_forward=1
+#) >> /etc/sysctl.d/routed-ap.conf
 
 #Set the iptables firewall
 iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
