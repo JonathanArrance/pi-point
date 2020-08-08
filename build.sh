@@ -32,3 +32,16 @@ sudo apt install -y dnsmasq
 sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
 
 #set up dhcpd.conf - set up perm IP for pi-point
+(
+cat   << 'EOF'
+interface wlan0
+    static ip_address=10.10.10.2/24
+    nohook wpa_supplicant
+EOF
+) >> /etc/dhcpd.conf
+
+#set up ip forwarding
+(
+cat << 'EOF'
+net.ipv4.ip_forward=1
+) >> /etc/sysctl.d/routed-ap.conf
