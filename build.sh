@@ -1,7 +1,9 @@
 #!/bin/bash -x
 
-$INTERFACE='wlan0'
-$PRIVATEIP='10.10.10.2'
+INTERFACE='wlan0'
+PRIVATEIP='10.10.10.2'
+PASSPHRASE='password'
+SSID='KickAss'
 
 #pre-reqs
 sudo apt-get update -y
@@ -45,3 +47,35 @@ EOF
 cat << 'EOF'
 net.ipv4.ip_forward=1
 ) >> /etc/sysctl.d/routed-ap.conf
+
+#Set the iptables firewall
+iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+
+#set the rules
+sudo netfilter-persistent save
+
+#set up dhcp
+(
+cat << 'EOF'
+interface=wlan0
+dhcp-range=10.10.10.3,10.10.10.200,255.255.255.0,24h
+domain=wlan
+address=/gw.wlan/10.10.10.1
+) >> /etc/dnsmasq.conf
+
+#Set up access point
+(
+interface=wlan0
+ssid=${SSID}
+hw_mode=g
+channel=7
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=${PASSPHRASE}
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+) >> /etc/hostapd/hostapd.conf
+
