@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 INTERFACE='wlan0'
-PRIVATEIP='10.10.10.2'
+PRIVATEIP='192.168.1.6'
 PASSPHRASE='password'
 SSID='KickAss'
 
@@ -37,7 +37,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables
 (
 cat   << 'EOF'
 interface wlan0
-    static ip_address=10.10.10.2/24
+    static ip_address=192.168.1.6/24
     nohook wpa_supplicant
 EOF
 ) >> /etc/dhcpd.conf
@@ -58,9 +58,9 @@ sudo netfilter-persistent save
 (
 cat << 'EOF'
 interface=wlan0
-dhcp-range=10.10.10.3,10.10.10.200,255.255.255.0,24h
+dhcp-range=192.168.1.6,192.168.1.200,255.255.255.0,24h
 domain=wlan
-address=/gw.wlan/10.10.10.1
+address=/gw.wlan/192.168.1.1
 ) >> /etc/dnsmasq.conf
 
 #Set up access point
