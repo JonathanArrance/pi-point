@@ -8,11 +8,11 @@ The Pi-Point is very easy to put together and setup. If you have ever done any o
 
 ## Requierments
 
-1. **Raspberry Pi Zero W**
+1. **Raspberry Pi**
 
-The Raspberry Pi zero is a very small single board computer that can be used for prototypeing and hobby projects. The board has all of the same capabilities as the original Pi Zero, however, it also incorporates 802.11 a/b/n. This project requiers the wireless capabilities of the Pi Zero W, so a standard Pi Zero will not work. 
+The Raspberry Pi is a very small single board computer that can be used for prototypeing and hobby projects. This project requiers the wireless capabilities of the Pi, so a Raspberry PI without a Wlan interface cannot be used.
 
-URL - https://www.raspberrypi.org/products/raspberry-pi-zero-w/
+URL - https://www.raspberrypi.org/products/
 
 2. **Micro SD Card**
 
@@ -32,11 +32,11 @@ For a portable solution that you can take anywhere, you will need to get a batte
 
 URL - https://www.adafruit.com/product/1565
 
-5. **Pi Zero Case**
+5. **Pi Case**
 
-The Pi Zero is a small board, and can fit in the palm of your hand. Its size makes it ideal for small IoT projects and hobbies, but the flip side of the coin is its durability. The Pi Zero is delicate and can be easily damaged. The case style is not important. Just get one that works well for you.
+The Raspberry Pi is a small board, and can fit in the palm of your hand. Its size makes it ideal for small IoT projects and hobbies, but the flip side of the coin is its durability. The Pi is delicate and can be easily damaged. The case style is not important. Just get one that works well for you.
 
-URL - https://www.adafruit.com/product/3446?gclid=CjwKCAjw97P5BRBQEiwAGflV6Y0jhUfiw3n1Z3D8wG5ladnEnmvibWrs9EjfhXbkEjziPVyuBL4FIhoCrc4QAvD_BwE
+URL - https://www.raspberrypi.org/products/raspberry-pi-3-case/
 
 ## Setup
 
