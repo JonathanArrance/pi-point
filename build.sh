@@ -46,6 +46,7 @@ EOF
 #(
 #cat << 'EOF'
 #net.ipv4.ip_forward=1
+#EOF
 #) >> /etc/sysctl.d/routed-ap.conf
 
 #Set the iptables firewall
@@ -56,15 +57,17 @@ sudo netfilter-persistent save
 
 #set up dhcp
 (
-cat << 'EOF'
+sudo cat << 'EOF'
 interface=wlan0
 dhcp-range=${PRIVATEIP},10.10.10.200,255.255.255.0,24h
 domain=wlan
 address=/gw.wlan/10.10.10.1
+EOF
 ) >> /etc/dnsmasq.conf
 
 #Set up access point
 (
+sudo cat << 'EOF'
 interface=wlan0
 ssid=${SSID}
 hw_mode=g
@@ -77,4 +80,5 @@ wpa_passphrase=${PASSPHRASE}
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
+EOF
 ) >> /etc/hostapd/hostapd.conf
