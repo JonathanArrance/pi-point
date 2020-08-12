@@ -1,6 +1,6 @@
 # Pi-Point
 
-A Pi Zero W based wireless access point. The Pi can be plugged into AC power, or a battery pack makeing it an ideal for use on the move.
+A Raspberry Pi based wireless access point. The Pi can be plugged into AC power, or a battery pack makeing it ideal for use on the move.
 
 # Build
 
